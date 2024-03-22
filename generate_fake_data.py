@@ -7,16 +7,17 @@ django.setup()
 from faker import Faker
 fake = Faker()
 
-from django.contrib.auth.models import User
+from ecommerce.models import CustomUser
 
 
 # Creating User
-def add_user(): user = User.objects.create_user(
+def add_user(): user = CustomUser.objects.create_user(
     username=fake.user_name(),
     email=fake.email(),
     password=fake.password(),
     first_name=fake.first_name(),
-    last_name=fake.last_name()
+    last_name=fake.last_name(),
+    user_type='buyer'
 ).save(); return user
 
 

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # dependencies
     'drf_yasg',
     'corsheaders',
+    'django_filters',
     'rest_framework',
 
     # custom apps
@@ -71,6 +72,9 @@ MIDDLEWARE = [
 
 # django-cors-headers
 CORS_ORIGIN_ALLOW_ALL = True
+
+# Custom user model with types
+AUTH_USER_MODEL = 'ecommerce.CustomUser'
 
 ROOT_URLCONF = 'config.urls'
 
@@ -142,3 +146,9 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# DRF config
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2
+}
