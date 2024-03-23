@@ -12,10 +12,21 @@
 * Django Admin: http://127.0.0.1:8000/admin/
 * Product Page: http://localhost:8000/product-page/
 * GitHub: https://github.com/siyam04/galib-django-assignment
-* Live (pythonanywhere): https://tutorial.djangogirls.org/en/deploy/ (followed this doc but facing error)
-```
-pa_autoconfigure_django.py --python=3.10 https://github.com/siyam04/galib-django-assignment.git --nuke
-```
+* Live: https://galib04.pythonanywhere.com/ (throws some error, but works fine in Local)
+
+>> Local product-page is OK
+![img_1.png](img_1.png)
+
+>> Live product-page throws ERRORS
+![img.png](img.png)
+
+>> Local POST API Responses are OK
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+
+>> Live POST API Responses throwing ERRORS
+![img_3.png](img_3.png)
 
 <hr/>
 
