@@ -14,19 +14,23 @@
 * GitHub: https://github.com/siyam04/galib-django-assignment
 * Live: https://galib04.pythonanywhere.com/ (throws some error, but works fine in Local)
 
->> Local product-page is OK
+> Local product-page is OK
+<br/>
 ![local-pp.png](utils%2Ferror_images%2Flocal-pp.png)
 
->> Live product-page throws ERRORS
+> Live product-page throws ERRORS
+<br/>
 ![live-pp.png](utils%2Ferror_images%2Flive-pp.png)
 
 >> Local POST API Responses are OK
+<br/>
 ![local-POST-req-1.png](utils%2Ferror_images%2Flocal-POST-req-1.png)
 ![local-POST-req-2.png](utils%2Ferror_images%2Flocal-POST-req-2.png)
 ![local-POST-req-3.png](utils%2Ferror_images%2Flocal-POST-req-3.png)
 ![local-POST-req-4.png](utils%2Ferror_images%2Flocal-POST-req-4.png)
 
 >> Live POST API Responses throwing ERRORS
+<br/>
 ![live-POST-reqs.png](utils%2Ferror_images%2Flive-POST-reqs.png)
 
 <hr/>
