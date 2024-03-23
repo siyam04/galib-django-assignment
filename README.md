@@ -15,19 +15,19 @@
 * Live: https://galib04.pythonanywhere.com/ (throws some error, but works fine in Local)
 
 >> Local product-page is OK
-![img_1.png](..%2Fimg_1.png)
+![local-pp.png](utils%2Ferror_images%2Flocal-pp.png)
 
 >> Live product-page throws ERRORS
-![img.png](..%2Fimg.png)
+![live-pp.png](utils%2Ferror_images%2Flive-pp.png)
 
 >> Local POST API Responses are OK
-![img_4.png](..%2Fimg_4.png)
-![img_5.png](..%2Fimg_5.png)
-![img_6.png](..%2Fimg_6.png)
-![img_7.png](..%2Fimg_7.png)
+![local-POST-req-1.png](utils%2Ferror_images%2Flocal-POST-req-1.png)
+![local-POST-req-2.png](utils%2Ferror_images%2Flocal-POST-req-2.png)
+![local-POST-req-3.png](utils%2Ferror_images%2Flocal-POST-req-3.png)
+![local-POST-req-4.png](utils%2Ferror_images%2Flocal-POST-req-4.png)
 
 >> Live POST API Responses throwing ERRORS
-![img_2.png](..%2Fimg_2.png)
+![live-POST-reqs.png](utils%2Ferror_images%2Flive-POST-reqs.png)
 
 <hr/>
 
