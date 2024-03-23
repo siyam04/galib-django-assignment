@@ -1,10 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
 </head>
+
 <body>
-<h1>Product List</h1>
+
+<div id="product-list">
+    {% for product in products %}
+        <div class="product">
+            <p>ID: {{ product.id }}</p>
+            <h3>Name: {{ product.name }}</h3>
+            <p>Price: {{ product.price }}</p>
+            <p>Description: {{ product.description }}</p>
+            <p>Seller: {{ product.seller.username }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+</div>
+
+<script src="{% static 'js/infinite_scroll.js' %}"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 * Django Admin: http://127.0.0.1:8000/admin/
 * Product Page: http://localhost:8000/product-page/
 * GitHub: https://github.com/siyam04/galib-django-assignment
-* Live: 
+* Live (pythonanywhere): 
 
 <hr/>
 

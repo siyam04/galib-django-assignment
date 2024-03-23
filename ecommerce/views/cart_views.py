@@ -1,15 +1,11 @@
+from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework import status, generics
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
 from ecommerce.models import Product, Cart, CartItem
-from ecommerce.serializers.cart_serializers import (
-    CartItemSerializer,
-    CartItemListSerializer
-)
+from ecommerce.serializers.cart_serializers import CartItemSerializer
 
 
 class AddToCartAPIView(APIView):
@@ -30,13 +26,3 @@ class AddToCartAPIView(APIView):
         cart_item = CartItem.objects.create(cart=cart, product=product, quantity=1)
         serializer = CartItemSerializer(cart_item)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-class CartItemListAPIView(generics.ListAPIView):
-    """
-    ViewSet for cart-item list
-    """
-    queryset = CartItem.objects.all()
-    serializer_class = CartItemListSerializer
-    filter_backends = [OrderingFilter]
-    ordering = ['-id']

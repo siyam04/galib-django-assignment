@@ -1,10 +1,10 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
+from ecommerce.views.cart_views import AddToCartAPIView
 from ecommerce.views.user_views import UserReadOnlyModelViewSet
 from ecommerce.views.product_views import ProductReadOnlyModelViewSet
 from ecommerce.views.order_views import OrderAPIView, DailyRevenueAPIView
-from ecommerce.views.cart_views import AddToCartAPIView, CartItemListAPIView
 
 
 app_name = 'ecommerce'
@@ -30,9 +30,6 @@ urlpatterns = [
 
     # Create daily revenue: api/daily-revenue/
     path('daily-revenue/', DailyRevenueAPIView.as_view(), name='daily-revenue'),
-
-    # List of cart-items: api/cart-items/
-    path('cart-items/', CartItemListAPIView.as_view(), name='cart-items'),
 
 ]
 

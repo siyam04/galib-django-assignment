@@ -37,7 +37,7 @@ class CustomUserAdmin(UserAdmin):
     )
 
     list_editable = ('user_type', 'is_active', 'is_staff', 'is_superuser')
-    list_display_links = ['username']
+    list_display_links = ('username',)
     ordering = ('-id',)
 
 
