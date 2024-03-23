@@ -28,12 +28,15 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+# SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure-_%))tl_27%@gqjph9s#6daug*7q)2mhc8tketwvh*=q(zxv5t*"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+# DEBUG = env("DEBUG")
+DEBUG = True
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+# ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -130,10 +133,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = env("LANGUAGE_CODE")
-TIME_ZONE = env("TIME_ZONE")
-USE_I18N = env("USE_I18N")
-USE_TZ = env("USE_TZ")
+# LANGUAGE_CODE = env("LANGUAGE_CODE")
+LANGUAGE_CODE = "en-us"
+# TIME_ZONE = env("TIME_ZONE")
+TIME_ZONE = "Asia/Dhaka"
+# USE_I18N = env("USE_I18N")
+USE_I18N = True
+# USE_TZ = env("USE_TZ")
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
