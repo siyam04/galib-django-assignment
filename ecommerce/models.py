@@ -62,4 +62,4 @@ class DailyData(models.Model):
     revenue = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return self.date
+        return str(self.date)

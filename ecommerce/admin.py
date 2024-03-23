@@ -5,6 +5,9 @@ from django.contrib.auth.admin import UserAdmin
 from .models import *
 
 
+# Heading
+admin.site.site_header = "Administration | E-commerce"
+
 # Group will not show in admin panel
 admin.site.unregister(Group)
 
