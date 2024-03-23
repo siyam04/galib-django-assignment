@@ -2,7 +2,12 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin
 
-from .models import CustomUser
+from .models import (
+    CustomUser,
+    Product,
+    Cart,
+    CartItem
+)
 
 
 # Group will not show in admin panel
@@ -11,6 +16,9 @@ admin.site.unregister(Group)
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
+    """
+    Custom admin class for viewing & adding new user with user_type field
+    """
     fieldsets = (
         (None, {'fields': ('username', 'password', 'user_type')}),
         ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
@@ -31,5 +39,26 @@ class CustomUserAdmin(UserAdmin):
     )
 
     list_editable = ('user_type', 'is_active', 'is_staff', 'is_superuser')
-
+    list_display_links = ['username']
     ordering = ('-id',)
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'price', 'seller', 'description']
+    list_display_links = ['name']
+    ordering = ['-id']
+
+
+@admin.register(Cart)
+class CartAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user']
+    list_display_links = ['user']
+    ordering = ['-id']
+
+
+@admin.register(CartItem)
+class CartItemAdmin(admin.ModelAdmin):
+    list_display = ['id', 'cart', 'product', 'quantity']
+    list_display_links = ['cart', 'product', 'quantity']
+    ordering = ['-id']

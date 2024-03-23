@@ -3,9 +3,6 @@ from ecommerce.models import CustomUser
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """
-    Serializes the user data
-    """
     class Meta:
         model = CustomUser
         fields = (

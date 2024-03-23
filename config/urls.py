@@ -6,16 +6,22 @@ from django.conf.urls.static import static
 # drf-yasg (API Documentation)
 from utils.swagger_config import schema_view
 
+# Product view
+from .views import ProductTemplateView
+
 
 urlpatterns = [
 
     # admin site
     path('admin/', admin.site.urls),
 
-    # home
-    path('', include('ecommerce.urls', namespace='ecommerce')),
+    # Api doc (swagger)
+    path('', schema_view.with_ui('swagger'), name='schema-swagger-ui'),
 
-    # api doc
-    path('api/', schema_view.with_ui('swagger'), name='schema-swagger-ui'),
+    # Product template
+    path('product-page/', ProductTemplateView.as_view()),
+
+    # Ecommerce apis
+    path('api/', include('ecommerce.urls', namespace='ecommerce')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
 
 
-class HomeView(TemplateView):
+class ProductTemplateView(TemplateView):
     template_name = "ecommerce/home.html"

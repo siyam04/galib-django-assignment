@@ -8,7 +8,7 @@ from ecommerce.serializers.user_serializers import UserSerializer
 
 class UserReadOnlyModelViewSet(viewsets.ReadOnlyModelViewSet):
     """
-    A simple ViewSet for viewing users provides the 'read-only' actions like .list() and .retrieve()
+    A simple ViewSet for viewing users, provides the 'read-only' actions like .list() and .retrieve()
     """
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer

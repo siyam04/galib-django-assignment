@@ -30,5 +30,5 @@ def populate(n):
 # Executing populate(): python generate_fake_data.py
 if __name__ == '__main__':
     print("** Generating fake data...")
-    populate(2)  # change value based on needs
+    populate(5)  # change value based on needs
     print('** Generated successfully **')
