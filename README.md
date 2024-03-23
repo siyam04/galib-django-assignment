@@ -15,18 +15,19 @@
 * Live: https://galib04.pythonanywhere.com/ (throws some error, but works fine in Local)
 
 >> Local product-page is OK
-![img_1.png](img_1.png)
+![img_1.png](..%2Fimg_1.png)
 
 >> Live product-page throws ERRORS
-![img.png](img.png)
+![img.png](..%2Fimg.png)
 
 >> Local POST API Responses are OK
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
-![img_7.png](img_7.png)
+![img_4.png](..%2Fimg_4.png)
+![img_5.png](..%2Fimg_5.png)
+![img_6.png](..%2Fimg_6.png)
+![img_7.png](..%2Fimg_7.png)
 
 >> Live POST API Responses throwing ERRORS
-![img_3.png](img_3.png)
+![img_2.png](..%2Fimg_2.png)
 
 <hr/>
 
@@ -34,4 +35,12 @@
 
 ```
 python generate_fake_data.py
+```
+
+### Pythonanywhere Deployment
+
+* Doc Followed: https://tutorial.djangogirls.org/en/deploy/
+
+```
+pa_autoconfigure_django.py --python=3.10 https://github.com/siyam04/galib-django-assignment.git --nuke
 ```
