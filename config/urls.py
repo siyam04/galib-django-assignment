@@ -19,7 +19,7 @@ urlpatterns = [
     path('', schema_view.with_ui('swagger'), name='schema-swagger-ui'),
 
     # Product template
-    path('product-page/', ProductTemplateView.as_view()),
+    path('product-page/', ProductTemplateView.as_view(), name='product-page'),
 
     # Ecommerce apis
     path('api/', include('ecommerce.urls', namespace='ecommerce')),

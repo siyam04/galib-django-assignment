@@ -2,12 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin
 
-from .models import (
-    CustomUser,
-    Product,
-    Cart,
-    CartItem
-)
+from .models import *
 
 
 # Group will not show in admin panel
@@ -60,5 +55,19 @@ class CartAdmin(admin.ModelAdmin):
 @admin.register(CartItem)
 class CartItemAdmin(admin.ModelAdmin):
     list_display = ['id', 'cart', 'product', 'quantity']
-    list_display_links = ['cart', 'product', 'quantity']
+    list_display_links = ['product']
+    ordering = ['-id']
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user', 'total_amount', 'date_ordered']
+    list_display_links = ['user']
+    ordering = ['-id']
+
+
+@admin.register(DailyData)
+class DailyDataAdmin(admin.ModelAdmin):
+    list_display = ['id', 'date', 'revenue']
+    list_display_links = ['date']
     ordering = ['-id']

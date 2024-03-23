@@ -30,6 +30,14 @@ class Cart(models.Model):
     def __str__(self):
         return self.user.username
 
+    @property
+    def total_amount(self):
+        # Calculate the total amount of all items in the cart
+        total = 0
+        for item in self.cartitem_set.all():
+            total += item.product.price * item.quantity
+        return total
+
 
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
@@ -38,3 +46,20 @@ class CartItem(models.Model):
 
     def __str__(self):
         return self.product.name
+
+
+class Order(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    date_ordered = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username
+
+
+class DailyData(models.Model):
+    date = models.DateField(unique=True)
+    revenue = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.date
