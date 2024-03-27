@@ -6,6 +6,16 @@
 
 <hr/>
 
+> * Create & Activate Virtual Environment
+> * Install Requirement
+> * Create .env & Paste .env_example contents to .env file
+> * Create SuperUser
+> * Create User and Products from Admin Panel
+![create-user.PNG](utils%2Ferror_images%2Fcreate-user.PNG)
+![create-product.PNG](utils%2Ferror_images%2Fcreate-product.PNG)
+
+<hr/>
+
 ### Links
 
 * API Doc: http://localhost:8000/
@@ -14,19 +24,19 @@
 * GitHub: https://github.com/siyam04/galib-django-assignment
 * Live: https://galib04.pythonanywhere.com/ (throws some error, but works fine in Local)
 
-> Local product-page is OK
+> * Local product-page is OK
 ![local-pp.png](utils%2Ferror_images%2Flocal-pp.png)
 
-> Live product-page throws ERRORS
+> * Live product-page throws ERRORS
 ![live-pp.png](utils%2Ferror_images%2Flive-pp.png)
 
-> Local POST API Responses are OK
+> * Local POST API Responses are OK
 ![local-POST-req-1.png](utils%2Ferror_images%2Flocal-POST-req-1.png)
 ![local-POST-req-2.png](utils%2Ferror_images%2Flocal-POST-req-2.png)
 ![local-POST-req-3.png](utils%2Ferror_images%2Flocal-POST-req-3.png)
 ![local-POST-req-4.png](utils%2Ferror_images%2Flocal-POST-req-4.png)
 
-> Live POST API Responses throwing ERRORS
+> * Live POST API Responses throwing ERRORS
 ![live-POST-reqs.png](utils%2Ferror_images%2Flive-POST-reqs.png)
 
 <hr/>
